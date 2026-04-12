@@ -1,21 +1,27 @@
 import { Header } from "./components/Header";
+import { ImmersiveBackdrop } from "./components/ImmersiveBackdrop";
 import { Hero } from "./components/Hero";
-import { FeatureTrajectory } from "./components/FeatureTrajectory";
-import { FeatureDiscover } from "./components/FeatureDiscover";
-import { Pricing } from "./components/Pricing";
+import { ProblemSolutionNew } from "./components/ProblemSolutionNew";
+import { HabitLibrary } from "./components/HabitLibrary";
+import { SignalSharing } from "./components/SignalSharing";
 import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-space">
-      <Header />
-      <main>
-        <Hero />
-        <FeatureTrajectory />
-        <FeatureDiscover />
-        <Pricing />
-      </main>
-      <Footer />
+    <div className="relative min-h-screen bg-space text-white">
+      <div className="fixed inset-0 z-0">
+        <ImmersiveBackdrop />
+      </div>
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <Hero />
+          <ProblemSolutionNew />
+          <HabitLibrary />
+          <SignalSharing />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-space text-white antialiased;
+    @apply bg-space font-sans text-white antialiased;
   }
 }
 

@@ -10,7 +10,7 @@ export default {
         mint: "#00FFA3",
       },
       fontFamily: {
-        sans: ["Inter", "Roboto", "system-ui", "sans-serif"],
+        sans: ["Space Grotesk", "Inter", "system-ui", "sans-serif"],
       },
       boxShadow: {
         "glow-cosmic": "0 0 24px rgba(46, 144, 255, 0.55), 0 0 48px rgba(46, 144, 255, 0.25)",

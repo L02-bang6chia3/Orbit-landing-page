@@ -15,6 +15,8 @@ const glowRest = {
     "0 0 28px rgba(46, 144, 255, 0.55), 0 0 56px rgba(232, 121, 249, 0.25)",
   gradientHover:
     "0 0 40px rgba(46, 144, 255, 0.75), 0 0 80px rgba(232, 121, 249, 0.45)",
+  gradientPulseHi:
+    "0 0 48px rgba(46, 144, 255, 0.95), 0 0 96px rgba(232, 121, 249, 0.5)",
 };
 
 export function GlowButton({
@@ -22,6 +24,7 @@ export function GlowButton({
   variant = "primary",
   className = "",
   type = "button",
+  pulse = false,
   ...props
 }) {
   const variants = {
@@ -41,14 +44,46 @@ export function GlowButton({
         }
       : { boxShadow: restShadow };
 
+  const pulseAnimate =
+    pulse && variant === "primary"
+      ? {
+          boxShadow: [glowRest.primary, glowRest.primaryHover, glowRest.primary],
+          scale: [1, 1.02, 1],
+        }
+      : pulse && variant === "gradient"
+        ? {
+            boxShadow: [
+              glowRest.gradient,
+              glowRest.gradientPulseHi,
+              glowRest.gradient,
+            ],
+            scale: [1, 1.03, 1],
+          }
+      : pulse && variant === "mint"
+        ? {
+            boxShadow: [glowRest.mint, glowRest.mintHover, glowRest.mint],
+            scale: [1, 1.02, 1],
+          }
+        : undefined;
+
+  const pulseTransition =
+    pulse && (variant === "primary" || variant === "gradient" || variant === "mint")
+      ? { duration: 2.4, repeat: Infinity, ease: "easeInOut" }
+      : undefined;
+
   return (
     <motion.button
       type={type}
       className={`${variants[variant]} ${className}`}
       style={gradientStyle}
-      whileHover={{ scale: 1.04, boxShadow: hoverShadow }}
+      animate={pulseAnimate}
+      transition={pulseTransition}
+      whileHover={{
+        scale: 1.04,
+        boxShadow: hoverShadow,
+        transition: { type: "spring", stiffness: 400, damping: 22 },
+      }}
       whileTap={{ scale: 0.98 }}
-      transition={{ type: "spring", stiffness: 400, damping: 22 }}
       {...props}
     >
       {children}
