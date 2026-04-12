@@ -36,7 +36,7 @@ function SyntheticHomeUI() {
 }
 
 export function AppScreenImage({
-  src = "/image_573e64.png",
+  src = "/idea2-home.png",
   alt = "ORBIT app home screen",
   className = "",
   objectPosition = "50% 0%",
@@ -55,8 +55,7 @@ export function AppScreenImage({
     <img
       src={src}
       alt={alt}
-      className={`h-full w-full object-cover ${className}`}
-      style={{ objectPosition }}
+      className={`h-auto w-auto ${className}`}
       onError={() => setOk(false)}
       loading="lazy"
     />

@@ -38,7 +38,7 @@ export function Pricing() {
             >
               <h3 className="text-lg font-semibold text-white">Monthly Orbit</h3>
               <p className="mt-4 flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-white">$9.99</span>
+                <span className="text-4xl font-bold text-white">49.000 VNĐ</span>
                 <span className="text-white/45">/mo</span>
               </p>
               <ul className="mt-8 flex-1 space-y-3 text-sm text-white/55">
@@ -80,7 +80,7 @@ export function Pricing() {
               >
                 <div className="flex flex-wrap items-center gap-2">
                   <h3 className="text-lg font-semibold text-white">
-                    Annual Trajectory
+                    Annual Orbit
                   </h3>
                   <span className="rounded-full border border-orbit/55 bg-orbit/15 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-orbit shadow-glow-orbit">
                     Recommended Path
@@ -88,7 +88,7 @@ export function Pricing() {
                 </div>
                 <p className="mt-4 flex items-baseline gap-1">
                   <span className="text-4xl font-bold text-gradient-heading">
-                    $79.99
+                    399.000 VNĐ
                   </span>
                   <span className="text-white/45">/yr</span>
                 </p>

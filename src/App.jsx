@@ -1,9 +1,10 @@
 import { Header } from './components/Header';
-import { ImmersiveBackdrop } from './components/ImmersiveBackdrop';
+import { LushSpaceBackground } from './components/LushSpaceBackground';
 import { Hero } from './components/Hero';
 import { ProblemSolutionNew } from './components/ProblemSolutionNew';
 import { HabitLibrary } from './components/HabitLibrary';
 import { SignalSharing } from './components/SignalSharing';
+import { Pricing } from './components/Pricing';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
           <ProblemSolutionNew />
           <HabitLibrary />
           <SignalSharing />
-          <pricing />
+          <Pricing />
         </main>
         <Footer />
       </div>
