@@ -162,7 +162,7 @@ export function SignalSharing() {
 
           {/* Orbit Sharing Card */}
           <RevealItem delay={0.1}>
-            <GlowCard className="p-8 sm:p-10">
+            <GlowCard className="p-8 sm:p-10 h-full flex flex-col">
               <NetworkIcon />
               <h3 className="text-2xl font-bold text-white mb-4 text-center">Orbit Sharing</h3>
               <p className="text-white/60 text-center mb-6">

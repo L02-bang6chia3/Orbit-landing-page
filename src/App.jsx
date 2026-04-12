@@ -1,10 +1,10 @@
-import { Header } from "./components/Header";
-import { LushSpaceBackground } from "./components/LushSpaceBackground";
-import { Hero } from "./components/Hero";
-import { ProblemSolutionNew } from "./components/ProblemSolutionNew";
-import { HabitLibrary } from "./components/HabitLibrary";
-import { SignalSharing } from "./components/SignalSharing";
-import { Footer } from "./components/Footer";
+import { Header } from './components/Header';
+import { ImmersiveBackdrop } from './components/ImmersiveBackdrop';
+import { Hero } from './components/Hero';
+import { ProblemSolutionNew } from './components/ProblemSolutionNew';
+import { HabitLibrary } from './components/HabitLibrary';
+import { SignalSharing } from './components/SignalSharing';
+import { Footer } from './components/Footer';
 
 export default function App() {
   return (
@@ -19,6 +19,7 @@ export default function App() {
           <ProblemSolutionNew />
           <HabitLibrary />
           <SignalSharing />
+          <pricing />
         </main>
         <Footer />
       </div>
