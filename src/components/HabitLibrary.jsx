@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { RevealSection, RevealItem } from "./RevealSection";
-import { GlowCard } from "./GlowCard";
+import { HapticHoverCard } from "./HapticHoverCard";
 import { GlowButton } from "./GlowButton";
 
 const habitCards = [
@@ -9,7 +9,7 @@ const habitCards = [
     title: "Language Learning",
     duration: "20 mins/day",
     description: "Build vocabulary and grammar through daily practice",
-    color: "cosmic",
+    color: "mint",
     features: ["Daily lessons", "Progress tracking", "Native pronunciation"]
   },
   {
@@ -64,7 +64,7 @@ export function HabitLibrary() {
                   transition: { type: "spring", stiffness: 300, damping: 20 }
                 }}
               >
-                <GlowCard className="h-full p-6 text-center">
+                <HapticHoverCard className="h-full p-6 text-center" hoverColor={habit.color}>
                   <h3 className="text-lg font-bold text-white mb-2">{habit.title}</h3>
                   <div className="inline-block mb-4 px-3 py-1 rounded-full border border-mint/30 bg-mint/10">
                     <span className="text-xs font-semibold text-mint">{habit.duration}</span>
@@ -86,7 +86,7 @@ export function HabitLibrary() {
                   >
                     Add to Orbit
                   </GlowButton>
-                </GlowCard>
+                </HapticHoverCard>
               </motion.div>
             </RevealItem>
           ))}

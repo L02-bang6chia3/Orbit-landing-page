@@ -18,7 +18,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <RevealItem>
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-orbit/95 sm:text-sm">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-mint/95 sm:text-sm">
             Intelligent Habit Ecosystem
           </p>
         </RevealItem>
@@ -27,12 +27,14 @@ export function Hero() {
             id="hero-heading"
             className="text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl"
           >
-            <span className="text-gradient-heading">You are the Center <br /> Let Habits Orbit You</span>
+            <span className="bg-gradient-to-r from-cosmic via-orbit to-mint bg-clip-text text-transparent">
+              You are the Center <br /> Let Habits Orbit You
+            </span>
           </h1>
         </RevealItem>
         <RevealItem delay={0.12}>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/65 sm:text-lg">
-            Want to build habits but your schedule is too chaotic? ORBIT is an intelligent habit ecosystem. You pick the habits, our Gravity Engine finds the empty slots in your calendar and schedules them automatically.
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg">
+            Want to build habits but your schedule is too chaotic?<br />ORBIT is an intelligent habit ecosystem. You pick the habits.<br />Our Gravity Engine schedules them automatically.
           </p>
         </RevealItem>
         {/* <RevealItem

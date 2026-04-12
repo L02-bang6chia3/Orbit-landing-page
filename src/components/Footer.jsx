@@ -10,7 +10,7 @@ export function Footer() {
           </p>
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium">
             <a
-              href="https://github.com"
+              href="https://github.com/L02-bang6chia3/mobile-habit-manager/wiki"
               className="text-white/55 transition hover:text-cosmic"
               target="_blank"
               rel="noreferrer"
@@ -18,15 +18,15 @@ export function Footer() {
               GitHub Wiki
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/L02-bang6chia3/mobile-habit-manager"
               className="text-white/55 transition hover:text-orbit"
               target="_blank"
               rel="noreferrer"
             >
-              Source Code
+              GitHub
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/L02-bang6chia3/mobile-habit-manager/wiki/MVP"
               className="text-white/55 transition hover:text-mint"
               target="_blank"
               rel="noreferrer"

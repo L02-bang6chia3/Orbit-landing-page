@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { GlowButton } from "./GlowButton";
 
 const links = [
-  { href: "#library", label: "Library" },
   { href: "#alignment", label: "Alignment" },
+  { href: "#library", label: "Library" },
   { href: "#signals", label: "Signals" },
 ];
 
@@ -33,7 +33,7 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <GlowButton variant="primary" className="shrink-0 px-4 py-2 text-xs">
+        <GlowButton variant="mint" className="shrink-0 px-4 py-2 text-xs border-2 border-mint/40 shadow-[0_0_20px_rgba(0,255,163,0.4)]">
           DOWNLOAD
         </GlowButton>
       </div>

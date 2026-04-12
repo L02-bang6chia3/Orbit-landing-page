@@ -1,5 +1,5 @@
 import { Header } from "./components/Header";
-import { ImmersiveBackdrop } from "./components/ImmersiveBackdrop";
+import { LushSpaceBackground } from "./components/LushSpaceBackground";
 import { Hero } from "./components/Hero";
 import { ProblemSolutionNew } from "./components/ProblemSolutionNew";
 import { HabitLibrary } from "./components/HabitLibrary";
@@ -8,9 +8,9 @@ import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-space text-white">
+    <div className="relative min-h-screen bg-[#0D0D12] text-white">
       <div className="fixed inset-0 z-0">
-        <ImmersiveBackdrop />
+        <LushSpaceBackground />
       </div>
       <div className="relative z-10">
         <Header />
