@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-space text-white antialiased;
+  }
+}
+
+@layer utilities {
+  .text-gradient-heading {
+    @apply bg-gradient-heading bg-clip-text text-transparent;
+  }
+  .glass-card {
+    @apply border border-cosmic/30 bg-space/80 backdrop-blur-xl;
+  }
+}
