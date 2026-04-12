@@ -65,10 +65,10 @@ function ShootingStar({ delay }) {
 export function LushSpaceBackground() {
   const meshBlobs = useMemo(() => [
     { color: "#2E90FF", size: 600, position: { x: 20, y: 30 }, duration: 20, delay: 0 },
-    { color: "#E879F9", size: 500, position: { x: 70, y: 60 }, duration: 25, delay: 2 },
+    // { color: "#E879F9", size: 500, position: { x: 70, y: 60 }, duration: 25, delay: 2 },
     { color: "#00FFA3", size: 700, position: { x: 45, y: 80 }, duration: 30, delay: 4 },
     { color: "#2E90FF", size: 400, position: { x: 85, y: 20 }, duration: 22, delay: 1 },
-    { color: "#E879F9", size: 550, position: { x: 10, y: 70 }, duration: 28, delay: 3 },
+    // { color: "#E879F9", size: 550, position: { x: 10, y: 70 }, duration: 28, delay: 3 },
   ], []);
 
   const shootingStars = useMemo(() => 
