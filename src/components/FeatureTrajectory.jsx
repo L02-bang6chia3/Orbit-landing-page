@@ -2,8 +2,8 @@ import { RevealSection, RevealItem } from "./RevealSection";
 import { GlowCard } from "./GlowCard";
 import { ScreenshotSlot } from "./ScreenshotSlot";
 
-const EDIT_SRC = "/screenshots/edit-habit.png";
-const TASK_SRC = "/screenshots/task-detail.png";
+const EDIT_SRC = "/Orbit-landing-page/screenshots/edit-habit.png";
+const TASK_SRC = "/Orbit-landing-page/screenshots/task-detail.png";
 
 export function FeatureTrajectory() {
   return (

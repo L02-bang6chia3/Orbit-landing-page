@@ -36,7 +36,7 @@ function SyntheticHomeUI() {
 }
 
 export function AppScreenImage({
-  src = "/idea2-home.png",
+  src = "/Orbit-landing-page/idea2-home.png",
   alt = "ORBIT app home screen",
   className = "",
   objectPosition = "50% 0%",
