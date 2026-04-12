@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-import { GravityWellOrb } from "./GravityWellOrb";
-import { GlowButton } from "./GlowButton";
-import { PhoneMockup } from "./PhoneMockup";
-import { AppScreenImage } from "./AppScreenImage";
-import { RevealItem } from "./RevealSection";
+import { motion } from 'framer-motion';
+import { GravityWellOrb } from './GravityWellOrb';
+import { GlowButton } from './GlowButton';
+import { PhoneMockup } from './PhoneMockup';
+import { AppScreenImage } from './AppScreenImage';
+import { RevealItem } from './RevealSection';
 
 export function Hero() {
   return (
@@ -55,13 +55,13 @@ export function Hero() {
 
       <RevealItem
         delay={0.14}
-        className="relative z-10 mx-auto mt-14 flex max-w-6xl justify-center px-4 sm:mt-20 sm:px-6 lg:px-8"
+        className="relative z-10 mx-auto mt-24 flex max-w-6xl justify-center px-4 sm:mt-40 sm:px-6 lg:px-8"
       >
         <motion.div
           className="w-full max-w-[300px]"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
+          viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <PhoneMockup>
