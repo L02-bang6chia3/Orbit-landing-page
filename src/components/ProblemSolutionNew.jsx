@@ -100,7 +100,7 @@ export function ProblemSolutionNew() {
     >
       <div className="mx-auto max-w-6xl">
         <RevealItem className="mb-14 text-center md:mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="text-gradient-heading text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             Stop Manual Planning. Start Orbiting.
           </h2>
         </RevealItem>
@@ -122,7 +122,7 @@ export function ProblemSolutionNew() {
           <RevealItem delay={0.1}>
             <GlowCard className="p-6 sm:p-8 h-full flex flex-col">
               <h3 className="text-xl font-bold text-white mb-4">
-                <span className="text-gradient-heading">Orbit Alignment</span>
+                <span className="text-xl font-bold text-white mb-4">Orbit Alignment</span>
               </h3>
               <p className="text-white/60 mb-6">
                 Connect your Google Calendar. Our <strong>Orbit Alignment</strong> feature

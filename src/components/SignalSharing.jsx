@@ -6,30 +6,25 @@ import { GlowButton } from './GlowButton';
 function SignalIcon() {
   return (
     <motion.div
-      className="relative h-16 w-16 mx-auto mb-4"
-      animate={{
-        scale: [1, 1.1, 1],
-        opacity: [0.8, 1, 0.8],
-      }}
+      className="relative mx-auto mb-4 h-16 w-16"
+      animate={{ y: [0, -2, 0] }}
       transition={{
-        duration: 2,
+        duration: 3.2,
         repeat: Infinity,
         ease: 'easeInOut',
       }}
     >
-      <div className="absolute inset-0 rounded-full bg-mint/20 border-2 border-mint/40"></div>
-      <div className="absolute inset-2 rounded-full bg-mint/40 border border-mint/60"></div>
-      <div className="absolute inset-4 rounded-full bg-mint"></div>
+      <div className="absolute inset-0 rounded-full border border-mint/20 bg-mint/8" />
+      <div className="absolute inset-2 rounded-full border border-mint/30 bg-mint/12" />
+      <div className="absolute inset-4 rounded-full bg-mint/85" />
+
       <motion.div
-        className="absolute inset-0 rounded-full border-2 border-mint"
-        animate={{
-          scale: [1, 1.5, 2],
-          opacity: [0.6, 0.3, 0],
-        }}
+        className="absolute inset-1 rounded-full border border-mint/18"
+        animate={{ opacity: [0.18, 0.32, 0.18] }}
         transition={{
-          duration: 2,
+          duration: 2.8,
           repeat: Infinity,
-          ease: 'easeOut',
+          ease: 'easeInOut',
         }}
       />
     </motion.div>
@@ -39,45 +34,34 @@ function SignalIcon() {
 function NetworkIcon() {
   return (
     <motion.div
-      className="relative h-16 w-16 mx-auto mb-4"
-      animate={{
-        rotate: [0, 360],
-      }}
+      className="relative mx-auto mb-4 h-16 w-16"
+      animate={{ rotate: [0, 6, 0, -6, 0] }}
       transition={{
-        duration: 20,
+        duration: 7,
         repeat: Infinity,
-        ease: 'linear',
+        ease: 'easeInOut',
       }}
     >
-      {/* Central node */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="h-3 w-3 rounded-full bg-orbit"></div>
+        <div className="h-3 w-3 rounded-full bg-orbit/90" />
       </div>
 
-      {/* Orbiting nodes */}
       {[0, 120, 240].map((rotation, i) => (
-        <motion.div
-          key={i}
-          className="absolute inset-0"
-          style={{ transform: `rotate(${rotation}deg)` }}
-        >
+        <div key={i} className="absolute inset-0" style={{ transform: `rotate(${rotation}deg)` }}>
           <motion.div
-            className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-orbit/80"
-            animate={{
-              scale: [1, 1.2, 1],
-            }}
+            className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 rounded-full bg-orbit/75"
+            animate={{ opacity: [0.55, 0.95, 0.55] }}
             transition={{
-              duration: 1.5,
+              duration: 2.4,
               repeat: Infinity,
-              delay: i * 0.5,
+              delay: i * 0.35,
               ease: 'easeInOut',
             }}
           />
-        </motion.div>
+        </div>
       ))}
 
-      {/* Connection lines */}
-      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 64 64">
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 64 64">
         {[0, 120, 240].map((rotation, i) => (
           <line
             key={i}
@@ -87,7 +71,7 @@ function NetworkIcon() {
             y2="8"
             stroke="#E879F9"
             strokeWidth="0.5"
-            opacity="0.4"
+            opacity="0.22"
             transform={`rotate(${rotation} 32 32)`}
           />
         ))}

@@ -44,9 +44,8 @@ export function Header() {
           className="flex shrink-0 items-center gap-2.5 text-sm font-bold text-white sm:text-base"
         >
           <OrbitLogo />
-          <span className="tracking-[0.08em]">
-            <span className="text-white">OR</span>
-            <span className="text-cosmic">BIT</span>
+          <span className="bg-gradient-to-r from-[#2E90FF] to-[#EAA6ED] bg-clip-text text-transparent">
+            ORBIT
           </span>
         </a>
 
