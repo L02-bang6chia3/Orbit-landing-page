@@ -9,7 +9,7 @@ const habitCards = [
     title: 'Language Learning',
     duration: '20 mins/day',
     description: 'Build vocabulary and grammar through daily practice',
-    color: 'orbit',
+    color: 'cosmic',
     features: ['Daily lessons', 'Progress tracking', 'Native pronunciation'],
   },
   {
@@ -17,7 +17,7 @@ const habitCards = [
     title: 'Mindfulness Practice',
     duration: '15 mins/day',
     description: 'Find your inner peace among the stars',
-    color: 'orbit',
+    color: 'cosmic',
     features: ['Guided sessions', 'Breathing exercises', 'Sleep enhancement'],
   },
   {
@@ -25,7 +25,7 @@ const habitCards = [
     title: 'Strength Training',
     duration: '45 mins, 3x/week',
     description: 'Build strength that defies gravity',
-    color: 'orbit',
+    color: 'cosmic',
     features: ['Progressive overload', 'Form guidance', 'Recovery tracking'],
   },
   {
@@ -33,7 +33,7 @@ const habitCards = [
     title: 'Daily Reading',
     duration: '30 mins/day',
     description: 'Explore new worlds through literature',
-    color: 'orbit',
+    color: 'cosmic',
     features: ['Book recommendations', 'Reading goals', 'Note taking'],
   },
 ];
