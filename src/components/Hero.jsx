@@ -53,9 +53,10 @@ export function Hero() {
           </RevealItem>
 
           <RevealItem delay={0.12}>
-            <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-7 text-white/72 sm:text-base">
-              Want to build habits automatically without fighting your schedule? ORBIT helps you
-              choose the habits, then places them into the right moments with calm, clear structure.
+            <p className="mx-auto mt-4 max-w-xl text-[20px] leading-7 text-white/72 sm:text-base">
+              Want to build habits automatically without fighting your schedule? <br />
+              ORBIT helps you choose the habits, then places them into the right moments with calm,
+              clear structure.
             </p>
           </RevealItem>
 
