@@ -64,7 +64,7 @@ function CleanTimeline() {
           { time: '10:30 AM', title: 'English Practice', habit: true, color: 'mint' },
           { time: '12:00 PM', title: 'Lunch Break', habit: false },
           { time: '2:00 PM', title: 'Team Meeting', habit: false },
-          { time: '4:00 PM', title: 'Meditation', habit: true, color: 'orbit' },
+          { time: '4:00 PM', title: 'Meditation', habit: true, color: 'osrbit' },
           { time: '6:00 PM', title: 'Workout', habit: true, color: 'cosmic' },
         ].map((item, i) => (
           <motion.div
