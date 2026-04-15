@@ -1,6 +1,7 @@
 import { GlowButton } from './GlowButton';
 
 const links = [
+  { href: '#target-users', label: 'Who' },
   { href: '#alignment', label: 'Alignment' },
   { href: '#library', label: 'Library' },
   { href: '#signals', label: 'Signals' },
@@ -57,7 +58,10 @@ export function Header() {
           ))}
         </nav>
 
-        <a href="#download" className="shrink-0 flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors">
+        <a
+          href="#download"
+          className="shrink-0 flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors"
+        >
           <DownloadIcon />
           Download
         </a>

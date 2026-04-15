@@ -4,7 +4,15 @@ import { RevealSection, RevealItem } from './RevealSection';
 // Icon components
 function GlobeIcon() {
   return (
-    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      className="w-8 h-8"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <circle cx="12" cy="12" r="10" />
       <path d="M2 12h20" />
       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
@@ -16,7 +24,15 @@ function GlobeIcon() {
 
 function RoadmapIcon() {
   return (
-    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      className="w-8 h-8"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
       <polyline points="9,22 9,12 15,12 15,22" />
       <path d="M12 2v6" />
@@ -27,7 +43,15 @@ function RoadmapIcon() {
 
 function ClockCapIcon() {
   return (
-    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      className="w-8 h-8"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <circle cx="12" cy="12" r="10" />
       <polyline points="12,6 12,12 16,14" />
       <path d="M12 2v4" />
@@ -47,28 +71,34 @@ function ClockCapIcon() {
 const targetUsers = [
   {
     id: 1,
-    title: "Language Learners",
+    title: 'Language Learners',
     icon: GlobeIcon,
-    iconColor: "text-[#00FFA3]",
-    problem: "Consistency is key in language learning. Finding 30 minutes daily in a changing schedule is exhausting.",
-    solution: "ORBIT transforms your language journey into automatic daily events, perfectly aligned with your available time slots for sustainable immersion."
+    iconColor: 'text-[#00FFA3]',
+    problem:
+      'Consistency is key in language learning. Finding 30 minutes daily in a changing schedule is exhausting.',
+    solution:
+      'ORBIT transforms your language journey into automatic daily events, perfectly aligned with your available time slots for sustainable immersion.',
   },
   {
     id: 2,
-    title: "Self-Study Experts",
+    title: 'Self-Study Experts',
     icon: RoadmapIcon,
-    iconColor: "text-[#E879F9]",
-    problem: "Mastering new skills takes months. Clear milestones exist, but manual planning often leads to burnout and missed targets.",
-    solution: "Gravity Engine analyzes your schedule and builds frictionless long-term study plans, ensuring steady progress without management energy."
+    iconColor: 'text-[#E879F9]',
+    problem:
+      'Mastering new skills takes months. Clear milestones exist, but manual planning often leads to burnout and missed targets.',
+    solution:
+      'Gravity Engine analyzes your schedule and builds frictionless long-term study plans, ensuring steady progress without management energy.',
   },
   {
     id: 3,
-    title: "Busy University Students",
+    title: 'Busy University Students',
     icon: ClockCapIcon,
-    iconColor: "text-[#2E90FF]",
-    problem: "Between classes, exams, research, and internships, finding time for self-study is a puzzle. You know what to do, but not when.",
-    solution: "ORBIT reads your busy calendar and intelligently schedules focus sessions, ensuring continuous growth without disrupting academic commitments."
-  }
+    iconColor: 'text-[#2E90FF]',
+    problem:
+      'Between classes, exams, research, and internships, finding time for self-study is a puzzle. You know what to do, but not when.',
+    solution:
+      'ORBIT reads your busy calendar and intelligently schedules focus sessions, ensuring continuous growth without disrupting academic commitments.',
+  },
 ];
 
 export function TargetUsers() {
@@ -81,7 +111,7 @@ export function TargetUsers() {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
       <div className="absolute left-1/4 top-1/3 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2E90FF]/5 blur-[100px]" />
       <div className="absolute right-1/4 bottom-1/3 h-[400px] w-[400px] translate-x-1/2 translate-y-1/2 rounded-full bg-[#E879F9]/5 blur-[100px]" />
-      
+
       <div className="relative z-10 mx-auto max-w-6xl">
         {/* Header */}
         <RevealItem className="mb-16 text-center">
@@ -104,38 +134,33 @@ export function TargetUsers() {
                   whileHover={{
                     y: -8,
                     scale: 1.02,
-                    transition: { type: 'spring', stiffness: 300, damping: 20 }
+                    transition: { type: 'spring', stiffness: 300, damping: 20 },
                   }}
                 >
                   {/* Glass morphism card */}
                   <div className="relative h-full rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-xl p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_8px_32px_rgba(0,0,0,0.3)] transition-all duration-300 group-hover:border-white/20 group-hover:shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_20px_56px_rgba(46,144,255,0.15),0_0_120px_rgba(46,144,255,0.05)]">
-                    
                     {/* Icon */}
                     <div className="flex justify-center mb-6">
-                      <div className={`rounded-full border border-white/20 bg-white/[0.05] p-3 backdrop-blur-sm ${user.iconColor} shadow-[0_0_20px_currentColor]`}>
+                      <div
+                        className={`rounded-full border border-white/20 bg-white/[0.05] p-3 backdrop-blur-sm ${user.iconColor} shadow-[0_0_20px_currentColor]`}
+                      >
                         <IconComponent />
                       </div>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-white text-center mb-6">
-                      {user.title}
-                    </h3>
+                    <h3 className="text-xl font-bold text-white text-center mb-6">{user.title}</h3>
 
                     {/* Problem */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-white/80 mb-2">Challenge</h4>
-                      <p className="text-sm text-white/60 leading-relaxed">
-                        {user.problem}
-                      </p>
+                      <p className="text-sm text-white/60 leading-relaxed">{user.problem}</p>
                     </div>
 
                     {/* Solution */}
                     <div>
                       <h4 className="text-sm font-semibold text-white/80 mb-2">ORBIT Solution</h4>
-                      <p className="text-sm text-white/60 leading-relaxed">
-                        {user.solution}
-                      </p>
+                      <p className="text-sm text-white/60 leading-relaxed">{user.solution}</p>
                     </div>
 
                     {/* Subtle glow effect on hover */}
