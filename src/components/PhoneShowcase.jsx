@@ -61,7 +61,7 @@ export function PhoneShowcase() {
         <div
           className="absolute inset-0 opacity-95"
           style={{
-            backgroundImage: "url('public/bg.png')",
+            backgroundImage: "url('/Orbit-landing-page/bg.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',

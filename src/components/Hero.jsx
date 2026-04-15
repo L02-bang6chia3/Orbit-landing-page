@@ -5,23 +5,26 @@ export default function Hero() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"]
+    offset: ['start start', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   return (
-    <section ref={containerRef} className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+    <section
+      ref={containerRef}
+      className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-black"
+    >
       {/* Background Image with Parallax */}
-      <motion.div 
+      <motion.div
         style={{ y, scale }}
         className="absolute inset-0 z-0 flex items-start justify-center"
       >
-        <img 
-          src="public/backgroud_LE_upscale_prime_x4 3.png" 
-          alt="Hero Background" 
+        <img
+          src="/Orbit-landing-page/hero_bg.png"
+          alt="Hero Background"
           className="w-full h-auto min-h-full object-cover object-top opacity-80"
           referrerPolicy="no-referrer"
         />
@@ -29,7 +32,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Content */}
-      <motion.div 
+      <motion.div
         style={{ opacity }}
         initial={{ y: 60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -44,10 +47,8 @@ export default function Hero() {
           Turn chaotic days into stable trajectories <br className="hidden md:block" />
           Pick your habits and let our engine pull them into perfect alignment.
         </p>
-        
       </motion.div>
 
-      
       {/* Scroll Indicator
       <motion.div 
         animate={{ y: [0, 15, 0] }}
