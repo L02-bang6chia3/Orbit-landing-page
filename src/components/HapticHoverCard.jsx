@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { GlowCard } from './GlowCard';
 
-export function HapticHoverCard({ children, className = '', hoverColor = 'mint', ...rest }) {
+export function HapticHoverCard({ children, className = '', hoverColor = 'cosmic', ...rest }) {
   const colorMap = {
     mint: {
       borderGlow: 'rgba(0, 255, 163, 0.45)',
@@ -25,7 +25,7 @@ export function HapticHoverCard({ children, className = '', hoverColor = 'mint',
         0 20px 56px rgba(0, 0, 0, 0.5)
       `,
       background:
-        'linear-gradient(135deg, rgba(13, 13, 18, 0.8), rgba(0, 255, 163, 0.1), rgba(46, 144, 255, 0.05))',
+        'linear-gradient(135deg, rgba(13, 13, 18, 0.8), rgba(46, 144, 255, 0.1), rgba(147, 197, 253, 0.05))',
     },
     orbit: {
       borderGlow: 'rgba(232, 121, 249, 0.45)',
@@ -37,7 +37,7 @@ export function HapticHoverCard({ children, className = '', hoverColor = 'mint',
         0 20px 56px rgba(0, 0, 0, 0.5)
       `,
       background:
-        'linear-gradient(135deg, rgba(13, 13, 18, 0.8), rgba(232, 121, 249, 0.1), rgba(0, 255, 163, 0.05))',
+        'linear-gradient(135deg, rgba(13, 13, 18, 0.8), rgba(232, 121, 249, 0.1), rgba(168, 85, 247, 0.05))',
     },
     white: {
       borderGlow: 'rgba(255, 255, 255, 0.12)',
@@ -51,7 +51,7 @@ export function HapticHoverCard({ children, className = '', hoverColor = 'mint',
     },
   };
 
-  const hoverStyle = colorMap[hoverColor] || colorMap.mint;
+  const hoverStyle = colorMap[hoverColor] || colorMap.cosmic;
 
   return (
     <motion.div

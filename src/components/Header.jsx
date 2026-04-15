@@ -57,11 +57,9 @@ export function Header() {
           ))}
         </nav>
 
-        <a href="#download" className="shrink-0">
-          <GlowButton variant="primary" size="sm" className="min-w-[118px]">
-            <DownloadIcon />
-            Download
-          </GlowButton>
+        <a href="#download" className="shrink-0 flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors">
+          <DownloadIcon />
+          Download
         </a>
       </div>
     </header>

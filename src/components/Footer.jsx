@@ -1,46 +1,31 @@
 export function Footer() {
   return (
-    <footer className="bg-space px-4 py-14 sm:px-6 lg:px-8">
+    <footer className="bg-black/50 backdrop-blur-xl border-t border-white/10 px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 px-6 py-8 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:px-10">
+        <div className="grid gap-12 px-6 py-8 sm:px-8 lg:grid-cols-[1.2fr_1fr] lg:items-start lg:px-10">
           <div className="max-w-md">
             <a
               href="#top"
-              className="inline-block text-[1.4rem] font-black leading-none tracking-[-0.02em] bg-gradient-to-r from-[#2E90FF] to-[#EAA6ED] bg-clip-text text-transparent sm:text-[1.6rem]"
+              className="inline-block text-[1.5rem] font-black leading-none tracking-[-0.02em] bg-gradient-to-r from-[#2E90FF] to-[#EAA6ED] bg-clip-text text-transparent sm:text-[1.8rem]"
             >
               ORBIT
             </a>
-            <p className="mt-3 text-sm leading-6 text-white/55">
+            <p className="mt-4 text-sm leading-6 text-white/60">
               The Celestial Observer. Mastering habits through the gravity of intelligence.
             </p>
 
-            <p className="mt-4 text-sm text-white/38">Developed by Team L02-bang6chia3</p>
+            <p className="mt-6 text-sm text-white/40">Developed by Team L02-bang6chia3</p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:justify-self-end lg:text-left">
+          <div className="grid gap-8 sm:grid-cols-2 lg:justify-self-end lg:text-right">
             <div>
-              <nav className="mt-4 flex flex-col items-start gap-3 text-sm">
-                <a
-                  href="https://github.com/L02-bang6chia3/mobile-habit-manager/wiki"
-                  className="text-white/62 transition-colors hover:text-white"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub Wiki
-                </a>
-
-                <a
-                  href="https://github.com/L02-bang6chia3/mobile-habit-manager/wiki/MVP"
-                  className="text-white/62 transition-colors hover:text-white"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  MVP Documents
-                </a>
-
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">
+                Design
+              </h3>
+              <nav className="flex flex-col items-start gap-3 text-sm lg:items-end">
                 <a
                   href="https://www.figma.com/design/8TXYfRYxqmiPkJuGzXwddN/L02_bang6chia3_27032026?node-id=0-1&t=IMnESwMJ4VotHtzv-0"
-                  className="text-white/62 transition-colors hover:text-white"
+                  className="text-white/60 transition-colors hover:text-white/90 hover:translate-x-1 lg:hover:-translate-x-1 duration-200"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -49,15 +34,40 @@ export function Footer() {
 
                 <a
                   href="https://www.behance.net/gallery/247428663/ORBIT-Intelligent-Habit-Ecosystem"
-                  className="text-white/62 transition-colors hover:text-white"
+                  className="text-white/60 transition-colors hover:text-white/90 hover:translate-x-1 lg:hover:-translate-x-1 duration-200"
                   target="_blank"
                   rel="noreferrer"
                 >
                   Behance Showcase
                 </a>
+              </nav>
+            </div>
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">
+                Resources
+              </h3>
+              <nav className="flex flex-col items-start gap-3 text-sm lg:items-end">
+                <a
+                  href="https://github.com/L02-bang6chia3/mobile-habit-manager/wiki"
+                  className="text-white/60 transition-colors hover:text-white/90 hover:translate-x-1 lg:hover:-translate-x-1 duration-200"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub Wiki
+                </a>
+
+                <a
+                  href="https://github.com/L02-bang6chia3/mobile-habit-manager/wiki/MVP"
+                  className="text-white/60 transition-colors hover:text-white/90 hover:translate-x-1 lg:hover:-translate-x-1 duration-200"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  MVP Documents
+                </a>
+
                 <a
                   href="https://github.com/L02-bang6chia3/mobile-habit-manager"
-                  className="text-white/62 transition-colors hover:text-white"
+                  className="text-white/60 transition-colors hover:text-white/90 hover:translate-x-1 lg:hover:-translate-x-1 duration-200"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -68,8 +78,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-6 border-t border-white/8 pt-5">
-          <div className="flex flex-col gap-2 text-xs text-white/32 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 border-t border-white/8 pt-8">
+          <div className="flex flex-col gap-3 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 ORBIT. All rights reserved.</p>
             <p>Built for product showcase and academic presentation.</p>
           </div>

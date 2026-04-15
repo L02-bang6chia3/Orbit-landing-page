@@ -1,153 +1,61 @@
-import { motion } from 'framer-motion';
-import { GlowButton } from './GlowButton';
-import { PhoneMockup } from './PhoneMockup';
-import { AppScreenImage } from './AppScreenImage';
-import { RevealItem } from './RevealSection';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
-function DownloadIcon() {
+export default function Hero() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+
   return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 24 24"
-      className="h-4 w-4"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M12 3v10" />
-      <path d="m8 10 4 4 4-4" />
-      <path d="M4 17.5h16" />
-    </svg>
-  );
-}
+    <section ref={containerRef} className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+      {/* Background Image with Parallax */}
+      <motion.div 
+        style={{ y, scale }}
+        className="absolute inset-0 z-0 flex items-start justify-center"
+      >
+        <img 
+          src="public/backgroud_LE_upscale_prime_x4 3.png" 
+          alt="Hero Background" 
+          className="w-full h-auto min-h-full object-cover object-top opacity-80"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black" />
+      </motion.div>
 
-export function Hero() {
-  return (
-    <section
-      id="top"
-      className="relative overflow-hidden px-4 pb-32 pt-12 sm:px-6 sm:pb-40 sm:pt-16 lg:px-8 lg:pt-20"
-      aria-labelledby="hero-heading"
-    >
-      {/* Background image */}
-      <div
-        className="absolute inset-0 z-0 opacity-30"
-        style={{
-          backgroundImage: "url('/Orbit-landing-page/bg.png')", // 👈 đổi tên file ở đây
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
+      {/* Content */}
+      <motion.div 
+        style={{ opacity }}
+        initial={{ y: 60, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10 text-center px-6 max-w-4xl pt-32"
+      >
+        <h1 className="font-display text-3xl md:text-6xl font-bold tracking-tight mb-6 leading-[1.1] bg-clip-text text-transparent bg-gradient-to-r from-[#2E90FF] to-[#EAA6ED]">
+          Find your center <br />
+          Keep your habits in orbit
+        </h1>
+        <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+          Turn chaotic days into stable trajectories <br className="hidden md:block" />
+          Pick your habits and let our engine pull them into perfect alignment.
+        </p>
+        
+      </motion.div>
 
-      {/* Overlay để chữ dễ đọc */}
-      <div className="absolute inset-0 z-0 bg-black/30" />
-
-      {/* Gradient glow nhẹ */}
-      <div className="absolute inset-x-0 top-0 z-0 mx-auto h-[250px] max-w-6xl bg-[radial-gradient(circle_at_72%_34%,rgba(46,144,255,0.10),transparent_30%),radial-gradient(circle_at_35%_40%,rgba(232,121,249,0.08),transparent_26%)] blur-3xl" />
-
-      <div className="relative z-10 mx-auto max-w-6xl">
-        {/* TEXT */}
-        <div className="mx-auto max-w-3xl text-center">
-          <RevealItem>
-            <p className="inline-flex rounded-full border border-white/8 bg-white/[0.02] px-4 py-2 text-xs font-medium uppercase tracking-[0.24em] text-white/60">
-              Intelligent Habit Ecosystem
-            </p>
-          </RevealItem>
-
-          <RevealItem delay={0.06}>
-            <h1
-              id="hero-heading"
-              className="mx-auto mt-4 text-4xl font-bold leading-[1.04] tracking-[-0.03em] sm:text-[3.1rem] lg:text-[3.8rem]"
-            >
-              <span className="bg-gradient-to-r from-[#2E90FF] to-[#60A5FA] bg-clip-text text-transparent">
-                Find your center.<br />
-                Keep your habits in orbit.
-              </span>
-            </h1>
-          </RevealItem>
-
-          <RevealItem delay={0.12}>
-            <p className="mx-auto mt-4 max-w-xl text-[18px] leading-7 text-white/72 sm:text-base">
-              Built for students and busy minds who struggle to stay consistent. <br />
-              ORBIT turns your goals into structured daily habits that fit naturally into your
-              routine — so you stop planning and start doing.
-            </p>
-          </RevealItem>
-
-          <RevealItem delay={0.18}>
-            <div id="download" className="mt-12 flex flex-wrap items-center justify-center gap-4">
-              <GlowButton variant="primary" size="lg" className="min-w-[180px] px-8 py-4 text-base font-semibold">
-                <DownloadIcon />
-                Download App
-              </GlowButton>
-
-              <a
-                href="#alignment"
-                className="inline-flex items-center rounded-full border border-white/10 px-6 py-4 text-base font-medium text-gray-400 transition-all hover:border-white/20 hover:text-white hover:bg-white/[0.02]"
-              >
-                See how it works
-              </a>
-            </div>
-          </RevealItem>
-        </div>
-
-        {/* PHONE MOCKUPS */}
-        <RevealItem
-          delay={0.2}
-          className="relative mt-20 flex min-h-[600px] items-end justify-center sm:mt-24 lg:mt-32 lg:min-h-[700px]"
-        >
-          <div className="absolute left-1/2 top-1/2 h-[380px] w-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cosmic/6 blur-[96px] sm:h-[460px] sm:w-[460px] lg:h-[560px] lg:w-[560px]" />
-
-          <div className="relative z-10 flex w-full max-w-[1100px] items-end justify-center gap-4 sm:gap-6 lg:gap-10">
-            {/* LEFT */}
-            <motion.div
-              className="w-[26%] max-w-[180px] translate-y-10 sm:max-w-[210px] sm:translate-y-12 lg:w-[22%] lg:max-w-[240px]"
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
-            >
-              <PhoneMockup className="origin-bottom -rotate-[8deg] scale-[1.04] shadow-[0_22px_56px_rgba(0,0,0,0.28)]">
-                <AppScreenImage
-                  src="/Orbit-landing-page/habit-library.png"
-                  alt="ORBIT library screen"
-                />
-              </PhoneMockup>
-            </motion.div>
-
-            {/* CENTER */}
-            <motion.div
-              className="relative z-20 w-[40%] max-w-[250px] sm:max-w-[290px] lg:w-[34%] lg:max-w-[340px]"
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.6, delay: 0, ease: 'easeOut' }}
-            >
-              <PhoneMockup className="origin-bottom scale-[1.16] shadow-[0_30px_84px_rgba(0,0,0,0.34)]">
-                <AppScreenImage src="/Orbit-landing-page/home.png" alt="ORBIT home screen" />
-              </PhoneMockup>
-            </motion.div>
-
-            {/* RIGHT */}
-            <motion.div
-              className="w-[26%] max-w-[180px] translate-y-10 sm:max-w-[210px] sm:translate-y-12 lg:w-[22%] lg:max-w-[240px]"
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
-            >
-              <PhoneMockup className="origin-bottom rotate-[8deg] scale-[1.04] shadow-[0_22px_56px_rgba(0,0,0,0.28)]">
-                <AppScreenImage
-                  src="/Orbit-landing-page/my-habits.png"
-                  alt="ORBIT habit detail screen"
-                />
-              </PhoneMockup>
-            </motion.div>
-          </div>
-        </RevealItem>
-      </div>
+      
+      {/* Scroll Indicator
+      <motion.div 
+        animate={{ y: [0, 15, 0] }}
+        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30"
+      >
+        <div className="w-[1px] h-16 bg-gradient-to-b from-white to-transparent" />
+      </motion.div> */}
     </section>
   );
 }

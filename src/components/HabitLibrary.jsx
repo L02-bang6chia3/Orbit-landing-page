@@ -72,8 +72,8 @@ export function HabitLibrary() {
                   <div className="min-h-[132px]">
                     <h3 className="mb-2 text-lg font-bold text-white">{habit.title}</h3>
 
-                    <div className="mb-4 inline-block rounded-full border border-mint/30 bg-mint/10 px-3 py-1">
-                      <span className="text-xs font-semibold text-mint">{habit.duration}</span>
+                    <div className="mb-4 inline-block rounded-full border border-purple-400/30 bg-purple-400/10 px-3 py-1">
+                      <span className="text-xs font-semibold text-purple-400">{habit.duration}</span>
                     </div>
 
                     <p className="min-h-[48px] text-sm text-white/60">{habit.description}</p>
@@ -82,14 +82,14 @@ export function HabitLibrary() {
                   <div className="space-y-2 mb-6">
                     {habit.features.map((feature, j) => (
                       <div key={j} className="flex items-start gap-2 text-left">
-                        <div className="ml-10 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mint"></div>
+                        <div className="ml-10 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-purple-400"></div>
                         <span className="text-xs text-white/70">{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <GlowButton
-                    variant={habit.color === 'mint' ? 'mint' : 'primary'}
+                    variant="primary"
                     className="mt-auto w-full text-xs"
                   >
                     Add to Orbit
@@ -101,7 +101,7 @@ export function HabitLibrary() {
         </div>
 
         <RevealItem className="mt-12 text-center">
-          <GlowButton variant="gradient" className="px-8">
+          <GlowButton variant="primary" className="px-8">
             Browse Full Library
           </GlowButton>
         </RevealItem>

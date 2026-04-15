@@ -1,10 +1,12 @@
 import { Header } from './components/Header';
 import { LushSpaceBackground } from './components/LushSpaceBackground';
-import { Hero } from './components/Hero';
+import Hero from './components/Hero';
+import { TargetUsers } from './components/TargetUsers';
 import { ProblemSolutionNew } from './components/ProblemSolutionNew';
 import { HabitLibrary } from './components/HabitLibrary';
 import { SignalSharing } from './components/SignalSharing';
 import { Pricing } from './components/Pricing';
+import { PhoneShowcase } from './components/PhoneShowcase';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -17,10 +19,12 @@ export default function App() {
         <Header />
         <main>
           <Hero />
+          <TargetUsers />
           <ProblemSolutionNew />
           <HabitLibrary />
           <SignalSharing />
           <Pricing />
+          <PhoneShowcase />
         </main>
         <Footer />
       </div>

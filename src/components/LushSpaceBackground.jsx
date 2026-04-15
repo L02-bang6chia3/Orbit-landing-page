@@ -8,14 +8,14 @@ function MeshGradientBlob({ color, size, position, duration, delay }) {
 
   return (
     <motion.div
-      className="absolute rounded-full blur-3xl opacity-10"
+      className="absolute rounded-full blur-3xl opacity-5"
       style={{
         backgroundColor: color,
         width: `${size}px`,
         height: `${size}px`,
         left: `${position.x}%`,
         top: `${position.y}%`,
-        filter: `blur(${size / 4}px)`,
+        filter: `blur(${size / 3}px)`,
         y,
         scale,
       }}
@@ -40,7 +40,7 @@ function ShootingStar({ delay }) {
   
   return (
     <motion.div
-      className="absolute h-px w-20 bg-gradient-to-r from-transparent via-mint to-transparent"
+      className="absolute h-px w-20 bg-gradient-to-r from-transparent via-white/20 to-transparent"
       style={{
         top: `${Math.random() * 100}%`,
         left: '-80px',
@@ -49,7 +49,7 @@ function ShootingStar({ delay }) {
       animate={{
         x: [0, distance * Math.cos(angle * Math.PI / 180)],
         y: [0, distance * Math.sin(angle * Math.PI / 180)],
-        opacity: [0, 1, 0],
+        opacity: [0, 0.4, 0],
       }}
       transition={{
         duration: 2,
@@ -80,18 +80,18 @@ export function LushSpaceBackground() {
       {/* Base deep space background */}
       <div className="absolute inset-0 bg-[#0D0D12]" />
       
-      {/* Animated mesh gradient blobs */}
+      {/* Animated mesh gradient blobs
       {meshBlobs.map((blob, i) => (
         <MeshGradientBlob key={i} {...blob} />
-      ))}
+      ))} */}
       
       {/* Multi-layered starfield */}
       <div className="absolute inset-0">
         {/* Layer 1: Tiny static stars */}
-        {Array.from({ length: 100 }, (_, i) => (
+        {Array.from({ length: 80 }, (_, i) => (
           <div
             key={`star1-${i}`}
-            className="absolute h-px w-px bg-white/30"
+            className="absolute h-px w-px bg-white/15"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -100,18 +100,18 @@ export function LushSpaceBackground() {
         ))}
         
         {/* Layer 2: Larger twinkling stars */}
-        {Array.from({ length: 30 }, (_, i) => (
+        {Array.from({ length: 20 }, (_, i) => (
           <motion.div
             key={`star2-${i}`}
-            className="absolute h-0.5 w-0.5 bg-white/60 rounded-full"
+            className="absolute h-0.5 w-0.5 bg-white/30 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              boxShadow: "0 0 4px rgba(255, 255, 255, 0.8)",
+              boxShadow: "0 0 2px rgba(255, 255, 255, 0.4)",
             }}
             animate={{
-              opacity: [0.3, 1, 0.3],
-              scale: [0.8, 1.2, 0.8],
+              opacity: [0.2, 0.6, 0.2],
+              scale: [0.8, 1.1, 0.8],
             }}
             transition={{
               duration: 2 + Math.random() * 3,
