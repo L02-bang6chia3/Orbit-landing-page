@@ -19,9 +19,6 @@ export function Footer() {
 
           <div className="grid gap-8 sm:grid-cols-2 lg:justify-self-end lg:text-left">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
-                Resources
-              </p>
               <nav className="mt-4 flex flex-col items-start gap-3 text-sm">
                 <a
                   href="https://github.com/L02-bang6chia3/mobile-habit-manager/wiki"
@@ -31,6 +28,7 @@ export function Footer() {
                 >
                   GitHub Wiki
                 </a>
+
                 <a
                   href="https://github.com/L02-bang6chia3/mobile-habit-manager/wiki/MVP"
                   className="text-white/62 transition-colors hover:text-white"
@@ -39,14 +37,24 @@ export function Footer() {
                 >
                   MVP Documents
                 </a>
-              </nav>
-            </div>
 
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
-                Project
-              </p>
-              <nav className="mt-4 flex flex-col items-start gap-3 text-sm">
+                <a
+                  href="https://www.figma.com/design/8TXYfRYxqmiPkJuGzXwddN/L02_bang6chia3_27032026?node-id=0-1&t=IMnESwMJ4VotHtzv-0"
+                  className="text-white/62 transition-colors hover:text-white"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Figma Design
+                </a>
+
+                <a
+                  href="https://www.behance.net/gallery/247428663/ORBIT-Intelligent-Habit-Ecosystem"
+                  className="text-white/62 transition-colors hover:text-white"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Behance Showcase
+                </a>
                 <a
                   href="https://github.com/L02-bang6chia3/mobile-habit-manager"
                   className="text-white/62 transition-colors hover:text-white"
@@ -54,9 +62,6 @@ export function Footer() {
                   rel="noreferrer"
                 >
                   GitHub Repository
-                </a>
-                <a href="#download" className="text-white/62 transition-colors hover:text-white">
-                  Download
                 </a>
               </nav>
             </div>
