@@ -53,6 +53,7 @@ export function PhoneShowcase() {
 
   return (
     <section
+      id="showcase"
       ref={sectionRef}
       className="relative pt-20 pb-8 md:pt-32 md:pb-12 px-6 overflow-hidden z-10"
     >
@@ -95,7 +96,7 @@ export function PhoneShowcase() {
       </div>
 
       {/* Phone Mockups Container */}
-      <div className="relative z-10 max-w-6xl mx-auto mt-60">
+      <div className="relative z-10 max-w-6xl mx-auto mt-96">
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-12 lg:gap-24">
           {/* Mockup 1: Left (Habit Library) */}
           <div className="w-full max-w-[160px] md:max-w-[200px] order-2 md:order-1 transition-all">

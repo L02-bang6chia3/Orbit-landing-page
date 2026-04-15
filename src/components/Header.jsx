@@ -1,10 +1,11 @@
 import { GlowButton } from './GlowButton';
 
 const links = [
-  { href: '#target-users', label: 'Who' },
+  { href: '#target-users', label: 'Users' },
   { href: '#alignment', label: 'Alignment' },
   { href: '#library', label: 'Library' },
   { href: '#signals', label: 'Signals' },
+  { href: '#showcase', label: 'Showcase' },
 ];
 
 function DownloadIcon() {
