@@ -66,15 +66,15 @@ export function HabitLibrary() {
               >
                 <HapticHoverCard className="h-full p-6 text-center" hoverColor={habit.color}>
                   <h3 className="text-lg font-bold text-white mb-2">{habit.title}</h3>
-                  <div className="inline-block mb-4 px-3 py-1 rounded-full border border-mint/30 bg-mint/10">
-                    <span className="text-xs font-semibold text-mint">{habit.duration}</span>
+                  <div className="inline-block mb-4 px-3 py-1 rounded-full border border-blue-300/30 bg-blue-300/10">
+                    <span className="text-xs font-semibold text-blue-300">{habit.duration}</span>
                   </div>
                   <p className="text-sm text-white/60 mb-6">{habit.description}</p>
                   
                   <div className="space-y-2 mb-6">
                     {habit.features.map((feature, j) => (
                       <div key={j} className="flex items-center justify-center gap-2">
-                        <div className="h-1.5 w-1.5 rounded-full bg-mint"></div>
+                        <div className="h-1.5 w-1.5 rounded-full bg-blue-300"></div>
                         <span className="text-xs text-white/70">{feature}</span>
                       </div>
                     ))}

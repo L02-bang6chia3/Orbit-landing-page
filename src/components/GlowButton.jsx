@@ -1,22 +1,22 @@
 import { motion } from "framer-motion";
 
 const sizeClasses = {
-  sm: "rounded-full px-3.5 py-2 text-xs",
-  md: "rounded-full px-5 py-2.5 text-sm",
-  lg: "rounded-full px-6 py-3 text-sm",
+  sm: "rounded-full px-4 py-2 text-xs font-medium",
+  md: "rounded-full px-6 py-3 text-sm font-medium",
+  lg: "rounded-full px-8 py-4 text-base font-semibold",
 };
 
 const baseClass =
   "inline-flex items-center justify-center gap-2 font-semibold tracking-[0.02em] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
 
 const glowRest = {
-  primary: "0 10px 24px rgba(46, 144, 255, 0.16)",
-  primaryHover: "0 14px 28px rgba(46, 144, 255, 0.22)",
-  mint: "0 10px 22px rgba(255, 255, 255, 0.08)",
-  mintHover: "0 14px 26px rgba(255, 255, 255, 0.12)",
-  gradient: "0 12px 26px rgba(46, 144, 255, 0.16)",
-  gradientHover: "0 14px 30px rgba(232, 121, 249, 0.18)",
-  pulseHi: "0 14px 30px rgba(46, 144, 255, 0.2)",
+  primary: "0 4px 16px rgba(46, 144, 255, 0.12)",
+  primaryHover: "0 6px 20px rgba(46, 144, 255, 0.18)",
+  mint: "0 4px 14px rgba(255, 255, 255, 0.06)",
+  mintHover: "0 6px 18px rgba(255, 255, 255, 0.09)",
+  gradient: "0 4px 16px rgba(46, 144, 255, 0.12)",
+  gradientHover: "0 6px 20px rgba(232, 121, 249, 0.15)",
+  pulseHi: "0 6px 20px rgba(46, 144, 255, 0.16)",
 };
 
 export function GlowButton({
@@ -30,7 +30,7 @@ export function GlowButton({
 }) {
   const variants = {
     primary: `${baseClass} bg-cosmic text-white focus-visible:outline-cosmic`,
-    mint: `${baseClass} border border-white/12 bg-white/[0.04] text-white focus-visible:outline-white`,
+    mint: `${baseClass} bg-white/[0.08] text-white/90 focus-visible:outline-white`,
     gradient: `${baseClass} text-white focus-visible:outline-orbit`,
   };
 
@@ -68,7 +68,7 @@ export function GlowButton({
       whileHover={{
         y: -1,
         boxShadow: hoverShadow,
-        transition: { type: "spring", stiffness: 360, damping: 24 },
+        transition: { duration: 0.2, ease: 'easeOut' },
       }}
       whileTap={{ scale: 0.98 }}
       {...props}
